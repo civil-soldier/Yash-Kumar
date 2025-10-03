@@ -1,7 +1,7 @@
 {
-  "name": "Yash-Kumar-Portfolio",
+  "name": "rishav-chanda-portfolio",
   "version": "0.1.0",
-  "homepage": "https://civil-soldier.github.io/Yash-Kumar",
+  "homepage": "https://rishavchanda.github.io",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
