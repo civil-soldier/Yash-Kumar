@@ -153,7 +153,7 @@ export const skills = [
   },
 ];
 
-export const Institute = [
+export const education = [
   {
     id: 0,
     img: "https://www.iiitdm.ac.in/_app/immutable/assets/logo.589b5376.webphttps://www.srmist.edu.in/wp-content/uploads/2022/01/srm-logo-white.svg",
