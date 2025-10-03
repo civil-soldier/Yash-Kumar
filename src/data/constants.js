@@ -82,7 +82,7 @@ export const skills = [
       },
       {
         name: "Embedded JS",
-        image: "https://static-00.iconduck.com/assets.00/ejs-icon-512x275-qg030i6v.png",
+        image: "https://img.icons8.com/color/512/clr_ejs_1.png",
       },
       {
         name: "Express Js",
