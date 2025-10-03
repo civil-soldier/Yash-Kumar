@@ -171,7 +171,7 @@ export const skills = [
 export const education = [
   {
     id: 0,
-    img: "https://www.srmist.edu.in/wp-content/uploads/2022/01/srm-logo-white.svg",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYc4t2R5tZq6D82MYMQKxRQqwXpdCb0yz5zA&s",
     school: "SRM Institute of Science and Technology, Kattankulathur",
     date: "Sept 2022 - May 2026",
     grade: "7.89 CGPA",
