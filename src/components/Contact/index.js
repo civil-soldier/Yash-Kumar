@@ -1,172 +1,210 @@
-import React from 'react'
-import styled from 'styled-components'
-import { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import { Snackbar } from '@mui/material';
+import React, { useState, useRef } from 'react';
+import { Snackbar, Alert } from '@mui/material'; 
+// Removed styled-components import to resolve the compilation error
 
-const Container = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-position: relative;
-z-index: 1;
-align-items: center;
-@media (max-width: 960px) {
-    padding: 0px;
-}
-`
+// --- Formspree Endpoint ---
+// Using the endpoint you provided: https://formspree.io/f/xrbylkga
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xrbylkga";
 
-const Wrapper = styled.div`
-position: relative;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-direction: column;
-width: 100%;
-max-width: 1350px;
-padding: 0px 0px 80px 0px;
-gap: 12px;
-@media (max-width: 960px) {
-    flex-direction: column;
-}
-`
+// --- Style Objects (In lieu of styled-components) ---
+// Note: Theme colors are placeholders and should be defined externally in a real app.
+const theme = {
+    text_primary: '#F2F3F4', // Light text for dark backgrounds
+    text_secondary: '#b1b2b3', // Secondary light text
+    card: '#1C1C27', // Dark card background
+    primary: '#854CE6', // Purple accent
+};
 
-const Title = styled.div`
-font-size: 42px;
-text-align: center;
-font-weight: 600;
-margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
-  @media (max-width: 768px) {
-      margin-top: 12px;
-      font-size: 32px;
-  }
-`;
-
-const Desc = styled.div`
-    font-size: 18px;
-    text-align: center;
-    max-width: 600px;
-    color: ${({ theme }) => theme.text_secondary};
-    @media (max-width: 768px) {
-        margin-top: 12px;
-        font-size: 16px;
+const styles = {
+    Container: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        position: 'relative',
+        zIndex: 1,
+        alignItems: 'center',
+        padding: '0 16px',
+        margin: '0 auto',
+        // Media query for small screens is handled via utility/inline styles where possible
+    },
+    Wrapper: {
+        position: 'relative',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexDirection: 'column',
+        width: '100%',
+        maxWidth: '1350px',
+        padding: '0 0 80px 0',
+        gap: '12px',
+    },
+    Title: {
+        fontSize: '42px',
+        textAlign: 'center',
+        fontWeight: 600,
+        marginTop: '20px',
+        color: theme.text_primary,
+    },
+    Desc: {
+        fontSize: '18px',
+        textAlign: 'center',
+        maxWidth: '600px',
+        color: theme.text_secondary,
+        marginTop: '12px',
+    },
+    ContactForm: {
+        width: '95%',
+        maxWidth: '600px',
+        display: 'flex',
+        flexDirection: 'column',
+        backgroundColor: theme.card,
+        padding: '32px',
+        borderRadius: '16px',
+        boxShadow: 'rgba(23, 92, 230, 0.15) 0px 4px 24px',
+        marginTop: '28px',
+        gap: '12px',
+        // Using action/method attributes on the JSX element instead of styled-components.attrs
+    },
+    ContactTitle: {
+        fontSize: '24px',
+        marginBottom: '6px',
+        fontWeight: 600,
+        color: theme.text_primary,
+    },
+    Input: {
+        flex: 1,
+        backgroundColor: 'transparent',
+        border: `1px solid ${theme.text_secondary}`,
+        outline: 'none',
+        fontSize: '18px',
+        color: theme.text_primary,
+        borderRadius: '12px',
+        padding: '12px 16px',
+        transition: 'border 0.3s',
+    },
+    Button: {
+        width: '100%',
+        textAlign: 'center',
+        background: `linear-gradient(225deg, ${theme.primary} 0%, hsla(294, 100%, 50%, 1) 100%)`,
+        padding: '13px 16px',
+        marginTop: '2px',
+        borderRadius: '12px',
+        border: 'none',
+        color: theme.text_primary,
+        fontSize: '18px',
+        fontWeight: 600,
+        cursor: 'pointer',
     }
-`;
-
-
-const ContactForm = styled.form`
-  width: 95%;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  background-color: ${({ theme }) => theme.card};
-  padding: 32px;
-  border-radius: 16px;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
-  margin-top: 28px;
-  gap: 12px;
-`
-
-const ContactTitle = styled.div`
-  font-size: 24px;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_primary};
-`
-
-const ContactInput = styled.input`
-  flex: 1;
-  background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.text_secondary};
-  outline: none;
-  font-size: 18px;
-  color: ${({ theme }) => theme.text_primary};
-  border-radius: 12px;
-  padding: 12px 16px;
-  &:focus {
-    border: 1px solid ${({ theme }) => theme.primary};
-  }
-`
-
-const ContactInputMessage = styled.textarea`
-  flex: 1;
-  background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.text_secondary};
-  outline: none;
-  font-size: 18px;
-  color: ${({ theme }) => theme.text_primary};
-  border-radius: 12px;
-  padding: 12px 16px;
-  &:focus {
-    border: 1px solid ${({ theme }) => theme.primary};
-  }
-`
-
-const ContactButton = styled.input`
-  width: 100%;
-  text-decoration: none;
-  text-align: center;
-  background: hsla(271, 100%, 50%, 1);
-  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  padding: 13px 16px;
-  margin-top: 2px;
-  border-radius: 12px;
-  border: none;
-  color: ${({ theme }) => theme.text_primary};
-  font-size: 18px;
-  font-weight: 600;
-  &:hover {
-    cursor: pointer;
-  }
-`
-
-
+};
 
 const Contact = () => {
+    // Hooks for Snackbar feedback
+    const [open, setOpen] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const form = useRef(null);
 
-  //hooks
-  const [open, setOpen] = React.useState(false);
-  const form = useRef();
+    // Form submission function to show Snackbar instead of redirecting (optional)
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(e.target);
+        
+        try {
+            const response = await fetch(FORMSPREE_ENDPOINT, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json',
+                },
+            });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    emailjs.sendForm('service_uycbl4m', 'template_o8v5oww', form.current, 'KjNuXr2Sqox9qU0Tb')
-      .then(function(response) {
-        console.log('Email sent!', response.status, response.text);
-        alert('Email sent successfully!');
-      }, function(error) {
-        console.error('Error sending email:', error);
-        alert('Oops! Something went wrong.');
-      });
-  }
-  return (
-    <div>
-        <Container>
-          <Wrapper>
-            <Title>Contact</Title>
-            <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
-            <ContactForm ref={form} onSubmit={handleSubmit}>
-              <ContactTitle>Email Me 🚀</ContactTitle>
-              <ContactInput type="text" name="from_name" placeholder="Your Name" required/>
-              <ContactInput type="email" name="from_email" placeholder="Your Email" required/>
-              <ContactInput placeholder="Subject" name="subject" required/>
-              <ContactInputMessage name="message" placeholder="Your Message" rows="4" required></ContactInputMessage>
-              <ContactButton type="submit" value="Send" />
-            </ContactForm>
-            <Snackbar
-              open={open}
-              autoHideDuration={6000}
-              onClose={()=>setOpen(false)}
-              message="Email sent successfully!"
-              severity="success"
-            />
-          </Wrapper>
-        </Container>
-    </div>
-  )
-}
+            if (response.ok) {
+                setIsSuccess(true);
+                setOpen(true);
+                e.target.reset(); // Clear the form
+            } else {
+                setIsSuccess(false);
+                setOpen(true);
+                console.error("Formspree error response:", await response.json());
+            }
+        } catch (error) {
+            setIsSuccess(false);
+            setOpen(true);
+            console.error("Network error submitting form:", error);
+        }
+    };
+    
+    return (
+        <div style={styles.Container}>
+            <div style={styles.Wrapper}>
+                <h1 style={styles.Title}>Contact</h1>
+                <p style={styles.Desc}>Feel free to reach out to me for any questions or opportunities!</p>
+                
+                {/* Form now uses standard JSX with ref and onSubmit for client-side feedback */}
+                <form 
+                    ref={form} 
+                    onSubmit={handleSubmit}
+                    style={styles.ContactForm}
+                > 
+                    <h2 style={styles.ContactTitle}>Email Me 🚀</h2>
+                    
+                    {/* Input fields using inline styles and simple name attributes */}
+                    <input 
+                        type="text" 
+                        name="name" 
+                        placeholder="Your Name" 
+                        required 
+                        style={styles.Input}
+                    />
+                    <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="Your Email" 
+                        required
+                        style={styles.Input}
+                    />
+                    <input 
+                        type="text" 
+                        name="subject" 
+                        placeholder="Subject" 
+                        required
+                        style={styles.Input}
+                    />
+                    <textarea 
+                        name="message" 
+                        placeholder="Your Message" 
+                        rows="4" 
+                        required
+                        style={{...styles.Input, resize: 'vertical'}}
+                    ></textarea>
+                    
+                    <input 
+                        type="submit" 
+                        value="Send" 
+                        style={styles.Button}
+                    />
+                </form>
+                
+                {/* Snackbar Feedback */}
+                <Snackbar
+                    open={open} 
+                    autoHideDuration={6000}
+                    onClose={() => setOpen(false)}
+                    anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+                >
+                    <Alert 
+                        onClose={() => setOpen(false)} 
+                        severity={isSuccess ? "success" : "error"} 
+                        variant="filled" 
+                        sx={{ width: '100%' }}
+                    >
+                        {isSuccess ? "Email sent successfully!" : "Oops! Something went wrong."}
+                    </Alert>
+                </Snackbar>
+            </div>
+        </div>
+    );
+};
 
 export default Contact
+;
