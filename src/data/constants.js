@@ -60,6 +60,11 @@ export const skills = [
           "https://symbols.getvecta.com/stencil_25/78_semantic-ui.b3a02ff612.jpg",
       },
       {
+        name: "Material UI",
+        image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg"
+      },
+      {
         name: "Passport.js",
         image:
           "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/passport/passport-original.svg",
