@@ -65,6 +65,11 @@ export const skills = [
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg"
       },
       {
+        name: "Vite",
+        image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg"
+      },
+      {
         name: "Passport.js",
         image:
           "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/passport/passport-original.svg",
@@ -236,7 +241,7 @@ export const projects = [
     ],
     category: "web app",
     github: "https://github.com/civil-soldier/Wanderlust",
-    webapp: "https://wanderlust-1-anj6.onrender.com/",
+    webapp: "https://wanderlust-2-l64v.onrender.com/",
   },
   {
     id: 1,
