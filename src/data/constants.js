@@ -84,7 +84,11 @@ export const skills = [
         image:
           "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/babel/babel-original.svg",
       },
-      
+      {
+        name: "Chart.js",
+        image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/chartjs/chartjs-original.svg",
+      }
     ],
   },
   {
@@ -117,6 +121,11 @@ export const skills = [
         name: "Axios",
         image:
           "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg",
+      },
+      {
+        name: "Resend.com",
+        image:
+        "https://cdn.resend.com/brand/resend-wordmark-white.svg",
       },
     ],
   },
@@ -182,6 +191,21 @@ export const skills = [
         name: "hoppscotch",
         image:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hoppscotch/hoppscotch-original.svg",
+      },
+      {
+        name: "jest",
+        image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg",
+      },
+      {
+        name: "Canva",
+        image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg",
+      },
+      {
+        name: "Figma",
+        image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
       },
     ],
   },
