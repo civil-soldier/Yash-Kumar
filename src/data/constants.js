@@ -283,4 +283,32 @@ export const projects = [
     github: "https://github.com/civil-soldier/spotify-demo",
     webapp: "https://spotify-demo-uojx.onrender.com/",
   },
+  {
+    id: 1,
+    title: "Zerodha Paper Trading Platform — Full-Stack FinTech Web Application",
+    date: "Dec 2025 -  Jan 2026",
+    description:
+      "A full-stack Zerodha-style paper trading platform that simulates real stock trading using live-like market data. Built with React, Node.js, Express, and MongoDB, the app features secure multi-step authentication (mobile & email OTP), JWT-based sessions, portfolio tracking, order placement, positions, holdings, and a complete forgot-password flow with email verification. Deployed on Vercel and Render with production-grade CORS handling, API security, and cloud-based email delivery using Resend.",
+    image:
+      ".",
+    tags: [
+  "React",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "JWT Authentication",
+  "OTP Verification",
+  "Full-Stack",
+  "FinTech",
+  "Paper Trading",
+  "REST APIs",
+  "Cloud Deployment",
+  "Vercel",
+  "Render",
+  "Resend Email API"
+],
+    category: "web app",
+    github: "https://github.com/civil-soldier/zerodha_PaperTradingPlatform",
+    webapp: "https://zerodha-paper-trading-platform-64ee.vercel.app/",
+  }
 ];
