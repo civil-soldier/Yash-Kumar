@@ -290,7 +290,7 @@ export const projects = [
     description:
       "A full-stack Zerodha-style paper trading platform that simulates real stock trading using live-like market data. Built with React, Node.js, Express, and MongoDB, the app features secure multi-step authentication (mobile & email OTP), JWT-based sessions, portfolio tracking, order placement, positions, holdings, and a complete forgot-password flow with email verification. Deployed on Vercel and Render with production-grade CORS handling, API security, and cloud-based email delivery using Resend.",
     image:
-      ".",
+      "https://github.com/civil-soldier/Zerodha-Paper-Trading-Platform-Full-Stack-FinTech-Web-Application/blob/main/screenshots/dashboard.png",
     tags: [
   "React",
   "Node.js",
@@ -308,7 +308,7 @@ export const projects = [
   "Resend Email API"
 ],
     category: "web app",
-    github: "https://github.com/civil-soldier/zerodha_PaperTradingPlatform",
+    github: "https://github.com/civil-soldier/Zerodha-Paper-Trading-Platform-Full-Stack-FinTech-Web-Application",
     webapp: "https://zerodha-paper-trading-platform-64ee.vercel.app/",
   }
 ];
