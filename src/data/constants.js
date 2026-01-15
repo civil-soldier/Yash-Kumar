@@ -10,7 +10,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/civil-soldier",
   resume:
-    "https://drive.google.com/file/d/1znDRhI75jj2Lp-dhIIDUFZS9zDM8Km5y/view?usp=drive_link",
+    "https://drive.google.com/file/d/19sYZeaIx_Ix2R4X4mrdRdIyM0hFwBQQw/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/yash-kumar-3495302a5/",
   insta: "https://www.instagram.com/falcon_heir/",
   leetcode: "https://leetcode.com/u/EagleYash/"
