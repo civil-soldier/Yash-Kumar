@@ -210,7 +210,7 @@ export const skills = [
       {
         name: "Cloudinary",
         image:
-          "https://www.theladders.com/s3proxy/company-photo.theladders.com/52097/0f6c2c36-3a00-4c0b-8d22-c2ca924b9299.png",
+          "https://cdn.prod.website-files.com/64d41aab8183c7c3324ddb29/64e796a4eb4e5dd20efcccab_3-logo-brand.svg",
       },
       {
         name: "hoppscotch",
