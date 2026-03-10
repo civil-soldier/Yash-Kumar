@@ -27,12 +27,12 @@ export const skills = [
       {
         name: "CSS",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
       },
       {
         name: "JavaScript",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
       },
       {
         name: "React Js",
@@ -113,6 +113,11 @@ export const skills = [
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
       },
       {
+        name: "mongoose",
+        image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongoose/mongoose-original.svg",
+      },
+      {
         name: "MySQL",
         image:
           "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
@@ -135,12 +140,17 @@ export const skills = [
       {
         name: "Git",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1024px-Git_icon.svg.png",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
       },
       {
         name: "GitHub",
         image:
           "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+      },
+      {
+        name: "Docker",
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg",
       },
       {
         name: "vercel",
@@ -153,9 +163,24 @@ export const skills = [
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEX///9G47c84rQt4bGY7dKQ7NCi79ju/fg44rPC9OT3/vz6/v3p/PaI681Q5Lp76cjO9+rZ+O596smr8Nq48+BY5b3G9ecg4K4D36vT9+zj+vNo58K99OKb7tXD9OWv8d1v6MNEnehfAAADXklEQVR4nO3d23aiMBhA4RpPUesBFa0HRt//KTu9mbVif1RyDrO/a0qzJ4INOvDxAQAAAAAAAAAAAORnWm2ut93kXU1l/PRM3GhhbNNIu/kTo21+2m1r/ZfqYHg19rGUflibhUdpk2XwvGpy+UkbdKVnZqG0B2UWDqVNxmHzzs1Kd48rp3B2sc0ro3C/0tZ5JRReB0592Reease+zAvnW+l39ajwYPHeUFTh2MME5lw4rX1MYMaFlae+bAsPzqfQzAuvfg7BfAtvHgOzLPQ5g1kWHrwGZlhY+TvJ5Fk49fY2kWth7Tkwu8LxO1OolH7f0bxOsz0OBWbhl7DF0dN1mtdnGaXVZXzbVOfPd839DM2P+asZ1Hq5yWrEXW2fFip9P6QeoaPT09eoXp9TD9DZ6tkE1tXrHeTu9uS9XjepR+dD+0Go1Cn14Hxon0JVF33+/Kf1KFSXxeufLkDrsl5dUg/Nk3vLYahW/ZjBj8/WKZymHponk5Yp1L04i/5oWTXpSeqB+XJueZHWKQajVr8NRo473ckvUp3kT7UgK+CLfJZZexlxVyEKFy1TmGY1EaLwJB6GiaYwSKF8GOqNnxF3FaJQXtwrPwPuLESh+G6oXE/QtkIUiodhsj9nAhRO5RNNqlVhgEL5s4pkq6YAheLaMNlhGKJwL36YsPc04M4CFIpvh+nWTdEKk10ADlAoLn91ssU9hRYojIxCC7kVSv8boVeF97Vg57TLzAoDoLB8FJaPwvJRWD4Ky0dh+TIrPGwEbtfFMis8Cl+mHrp9Czqzwv9gjU9hdxRGRqEFCiOj0AKFkVFogcLIKLRAYWQUWqAwsv5fp7nOBG7fssusMAAKy0dh+SgsH4Xlo7B8FJYvs8LtUnBz2mVmheJd53u1Au7/Gp9CCxRGRqEFCiOj0AKFkVFogcLIKLRAYWQUWhALh70qlB7Zl64wwHWaxVziabzdiaPpyX1iAQAAgF5rpAdpfZnbaOlZW+ZNXDfSbvJ4Zpe8Aja3ER9hcjc2Ee8Knsdz1yikkEIKKaSQQgoppJBCCimkkMJ+FDbSp9xHc5uB9NHzQ6F0u/jhQ6H0qx4KxU+53a7THMaj3x7+0Rphk5F5K/izuBvzAYN7aTcjs1Dazci8oAUAAAAAAAAAAAAE8w39zlW3oYFBQgAAAABJRU5ErkJggg==",
       },
       {
+        name: "Netlify",
+        image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg",
+      },
+      {
+        name: "NodeMon",
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodemon/nodemon-original.svg",
+      },
+      {
         name: "npm",
         image:
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAaVBMVEX////LODfXdHPKMTDIJCP56+vKNDPRVlX77+/IIiDafHz02trKMzLJJybJLCrTXVzin5/twsLQUE/HGxn++fn34+PXbm3PSUjmrq7qubn89PTJLSzvycnglJTptLTNPj3ORUPHFRPz1tVK8UCsAAACEElEQVR4nO3b3VLiMACAUbGVH5fCCigCLuK+/0OuM0uTOhZKmMUt9RwvZFKS9POqMPHmBgAAAAAAAAAAAAAAAAAAAKDzbrvgaGG2ya7dJjta2Ov3rl2/p/DaKVTYfgq/U2F+uklcf5wwLYvTNgnT6qUX5sO7Uw1finJWdrs+fdqvTTltsj19twOLTZILR0ff99GPUSi8T5j2M9xV8ZAwrV6hcE9hPYUHKEyisKSwnsIDWlm4fp3tLZ/iaGPhw66cttvG0cbC+2U57fUxjk5nYXTx7wuHb/29bJBQuMrLaflzQuHTppw2rxTusnL07RKF8/L6eJpSGPYvkgrDp49RpXAZ7nGuUKFChQoVKlSoUKFChQoVKvziwvAtRmcLw/6TjhbeLD696FphLYUKFdZSqFDhB60sXHeoMF8PazyGlv5gUQ6uX8KpsgOFi7q11vHUV7Gq223xNA538zu8YRELR3dxsfRTX70iz4v9T3hRhL/U+0pFeamIJ/cOFG7fPq7z91f15F7xaa/3dSsHJSdFeak6WpkV7+uypy8bn7wvT6HCBgq/gEKFDdpfOA6ncZIkFJ61fopsfLRwcJZZSKw/qz98js9Uy/O2SHG08DzxafXA/1uEB9DeZNu8XAvFzxaNqt8IXxGFCttPocL2+waF8/Gp8ussfJxNTzVY/e+bBQAAAAAAAAAAAAAAAAAAAOiCP4KhccZVE+xKAAAAAElFTkSuQmCC",
+      },
+      {
+        name: "Postman",
+        image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
       },
       {
         name: "VS Code",
@@ -207,6 +232,26 @@ export const skills = [
         image:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
       },
+      {
+        name: "Raspberry Pi",
+        image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/raspberrypi/raspberrypi-original.svg",
+      },
+      {
+        name: "leetcode",
+        image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/leetcode/leetcode-original.svg",
+      },
+      {
+        name: "google colab",
+        image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecolab/googlecolab-original.svg",
+      },
+      {
+        name: "jupyter",
+        image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg",
+      }
     ],
   },
 ];
