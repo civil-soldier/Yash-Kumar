@@ -158,12 +158,7 @@ export const skills = [
     title: "DevOps & Cloud",
     skills: [
       {
-        name: "Docker",
-        image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg",
-      },
-      {
-        name: "AWS",
+        name: "AWS EC2",
         image:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
       },
@@ -176,6 +171,16 @@ export const skills = [
         name: "PM2",
         image:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pm2/pm2-original.svg",
+      },
+      {
+        name: "Certbot / SSL",
+        image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ssh/ssh-original-wordmark.svg",
+      },
+      {
+        name: "Docker",
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg",
       },
       {
         name: "Vercel",
@@ -371,28 +376,30 @@ export const projects = [
   {
 id: 2,
 title: "Arthiq — Zerodha-Inspired Paper Trading & Investment Simulation Platform",
-date: "dec 2025 - jan 2026",
+date: "Dec 2025 - Present",
 description:
-"A modern investment simulation platform inspired by Zerodha that allows users to practice trading with virtual capital in a realistic market environment. Built using React, Node.js, Express, and MongoDB, the application features a multi-step authentication system (mobile OTP → email OTP → account setup), secure JWT-based sessions, and a responsive UI designed to replicate a professional trading experience. The platform includes onboarding flows, portfolio simulation concepts, and a production-ready frontend architecture with dark-mode UI, responsive navigation, and modular component design. Deployed using Vercel and integrated with scalable backend APIs.",
+"A full-stack investment simulation platform inspired by Zerodha, enabling users to practice trading with virtual capital in a realistic market environment. Built with React, Node.js, Express, and MongoDB, featuring a multi-step authentication system (mobile OTP → email OTP → account setup) using JWT-based sessions and Resend.com for transactional email delivery. Initially deployed on Render but migrated the backend to AWS EC2 to eliminate cold start latency, ensuring instant API response times critical for OTP-based authentication flows. Configured Nginx as a reverse proxy to route domain traffic to the Node.js backend, mapped a custom domain (papertrading.site) via GoDaddy DNS, and secured the API endpoint with HTTPS using SSL certificates via Let's Encrypt (Certbot). Used PM2 as a process manager for zero-downtime restarts and auto-recovery on server reboots. Follows a Git-based deployment workflow — changes committed to GitHub and pulled on the production server. Frontend deployed on Vercel with environment-based API configuration.",
 image:
 "https://github.com/civil-soldier/Arthiq/blob/main/screenshots/home.png",
 tags: [
 "React",
 "Node.js",
-"Express",
+"Express.js",
 "MongoDB",
 "JWT Authentication",
 "OTP Verification",
+"AWS EC2",
+"Nginx",
+"PM2",
+"Certbot / SSL",
+"Custom Domain",
+"DNS Management",
+"REST APIs",
+"Resend.com",
+"Cloudinary",
+"Vercel",
 "Full-Stack",
 "FinTech",
-"Investment Simulator",
-"REST APIs",
-"Responsive UI",
-"Dark Mode UI",
-"Vercel Deployment",
-"RENDER Deployment",
-"resend.com Integration",
-"Cloudinary Integration",
 ],
 category: "web app",
 github: "https://github.com/civil-soldier/arthiq-paper-trading-platform",
