@@ -132,6 +132,16 @@ export const skills = [
         image:
         "https://cdn.resend.com/brand/resend-wordmark-white.svg",
       },
+      {
+        name: "niginx",
+        image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg",
+      },
+      {
+        name: "pm2",
+        image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pm2/pm2-original.svg",
+      },
     ],
   },
   {
@@ -171,6 +181,11 @@ export const skills = [
         name: "Netlify",
         image:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg",
+      },
+      {
+        name: "AWS",
+        image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
       },
       {
         name: "NodeMon",
