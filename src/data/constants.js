@@ -157,6 +157,11 @@ export const skills = [
         image:
         "https://cdn.simpleicons.org/npm/white"
       },
+      {
+        name: "JWT",
+        image:
+        "https://cdn.simpleicons.org/jsonwebtokens/white"
+      }
     ],
   },
   {
